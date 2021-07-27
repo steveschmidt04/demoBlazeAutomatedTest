@@ -1,0 +1,20 @@
+{
+  "name": "demoblaze_poc",
+  "version": "1.0.0",
+  "description": "DemoBlaze POC",
+  "main": "index.js",
+  "scripts": {
+    "test:chrome": "testcafe chrome ./tests --reporter html:./reports/results.html -s takeOnFails=true",
+    "test:chrome:headless": "testcafe chrome:headless ./tests --reporter html:./reports/results.html -s takeOnFails=true",
+    "test:chrome:mobile": "testcafe chrome:emulation:device=iphone X ./tests --reporter html:./reports/results.html -s takeOnFails=true",
+    "test:ff": "testcafe firefox ./tests/mjl.ts --reporter html:./reports/results.html -s takeOnFails=true",
+    "test:edge": "testcafe edge ./tests --reporter html:./reports/results.html -s takeOnFails=true"
+  },
+  "keywords": [],
+  "author": "Schmidt",
+  "license": "ISC",
+  "dependencies": {
+    "testcafe": "1.15.0",
+    "testcafe-reporter-html": "^1.4.6"
+  }
+}
