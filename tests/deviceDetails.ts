@@ -3,7 +3,7 @@ import {homePage} from "../pageObjects/homePage";
 import {loginModal} from "../pageObjects/loginModal"
 import {signUpModal} from "../pageObjects/signUpModal"
 import {productPage} from "../pageObjects/productPage"
-
+import { getHomePageItems, login } from '../helpers/functions';
 
 let sp = new signUpModal
 let lp = new loginModal
@@ -29,28 +29,42 @@ fixture `Device Details`
         ajaxRequestTimeout: 60000
     })
     
-    dataSet.forEach(data =>{  
-    test(`Verify Device Details screen displayed with correct information if user clicks on ${data.name}`, async t => {    
-      let numberOfResults = await Selector('#tbodyid').child('div').count;
-      let devices = new Array;
-
-      //populate array of device names
-      for (let i = 0;  i < numberOfResults; i++){
-        devices[i] = Selector('#tbodyid').child('div').nth(i).child('div').child('div').child('.card-title');
-      }
-    
-      //cycle through list of devices and click/verify device details pages
-     for (let i=0; i < devices.length; i++){
-          if (await devices[i].innerText == data.name){
-              await t.click(Selector('#tbodyid').child('div').nth(i).child('div').child('div').child('.card-title').child('a'))
-              await t.expect(pp.productName.innerText).contains(data.name);
-              await t.expect(pp.productPrice.innerText).contains(data.price);
-              await t.expect(pp.productDesc.innerText).contains(data.desc);
-              break;
-          }
-    }  
-    });   
-    });
-
- 
-
+dataSet.forEach(async data =>{ 
+test(`Verify phone information for ${data.name} populated correctly on homepage if user selects phone from left menu`, async t => {    
+    //Validate contents of phone card on homepage
+    if (data.type == 'Phone'){
+        let devices = await getHomePageItems();
+        for (let i=0; i < devices.length; i++){
+            if (await devices[i] == data.name){
+                await t.expect(Selector('#tbodyid').child('div').nth(i).child('div').child('div').child('.card-title').innerText).contains(data.name);
+                await t.expect(Selector('#tbodyid').child('div').nth(i).child('div').child('div').child('h5').innerText).contains(data.price);
+                await t.expect(Selector('#tbodyid').child('div').nth(i).child('div').child('div').child('#article').innerText).contains(data.desc);
+    }; 
+    };   
+    }
+    //Validate contents of laptop card on homepage
+    else if (data.type == 'Laptop'){
+        await t.click(hp.laptops);    
+        let devices = await getHomePageItems();
+        for (let i=0; i < devices.length; i++){
+            if (await devices[i] == data.name){
+                await t.expect(Selector('#tbodyid').child('div').nth(i).child('div').child('div').child('.card-title').innerText).contains(data.name);
+                await t.expect(Selector('#tbodyid').child('div').nth(i).child('div').child('div').child('h5').innerText).contains(data.price);
+                await t.expect(Selector('#tbodyid').child('div').nth(i).child('div').child('div').child('#article').innerText).contains(data.desc);
+    }; 
+    };   
+    }
+     //Validate contents of laptop card on homepage
+    else if (data.type == 'Monitor'){
+        await t.click(hp.monitors);    
+        let devices = await getHomePageItems();
+        for (let i=0; i < devices.length; i++){
+            if (await devices[i] == data.name){
+                await t.expect(Selector('#tbodyid').child('div').nth(i).child('div').child('div').child('.card-title').innerText).contains(data.name);
+                await t.expect(Selector('#tbodyid').child('div').nth(i).child('div').child('div').child('h5').innerText).contains(data.price);
+                await t.expect(Selector('#tbodyid').child('div').nth(i).child('div').child('div').child('#article').innerText).contains(data.desc);
+    }; 
+    };   
+    }
+    })
+})

@@ -1,14 +1,92 @@
 [
     {
         "name": "Samsung galaxy s6",
-        "type": "phone",
+        "type": "Phone",
         "price": "$360",
-        "desc": "The Samsung Galaxy S6 is powered by 1.5GHz octa-core Samsung Exynos 7420 processor"
+        "desc": "The Samsung Galaxy S6 is powered by 1.5GHz octa-core Samsung Exynos 7420 processor and it comes with 3GB of RAM. The phone packs 32GB of internal storage cannot be expanded."
     },
     {
         "name": "Nokia lumia 1520",
-        "type": "phone",
+        "type": "Phone",
         "price": "$820",
-        "desc": "The Nokia Lumia 1520 is powered by 2.2GHz quad-core Qualcomm Snapdragon 800"
+        "desc": "The Nokia Lumia 1520 is powered by 2.2GHz quad-core Qualcomm Snapdragon 800 processor and it comes with 2GB of RAM."
+    },
+    {
+        "name": "Nexus 6",
+        "type": "Phone",
+        "price": "$650",
+        "desc": "The Motorola Google Nexus 6 is powered by 2.7GHz quad-core Qualcomm Snapdragon 805 processor and it comes with 3GB of RAM."
+    },
+    {
+        "name": "Samsung galaxy s7",
+        "type": "Phone",
+        "price": "$800",
+        "desc": "The Samsung Galaxy S7 is powered by 1.6GHz octa-core it comes with 4GB of RAM. The phone packs 32GB of internal storage that can be expanded up to 200GB via a microSD card."
+    },
+    {
+        "name": "Iphone 6 32gb",
+        "type": "Phone",
+        "price": "$790",
+        "desc": "It comes with 1GB of RAM. The phone packs 16GB of internal storage cannot be expanded. As far as the cameras are concerned, the Apple iPhone 6 packs a 8-megapixel primary camera on the rear and a 1.2-megapixel front shooter for selfies."
+    },
+    {
+        "name": "Sony xperia z5",
+        "type": "Phone",
+        "price": "$320",
+        "desc": "Sony Xperia Z5 Dual smartphone was launched in September 2015. The phone comes with a 5.20-inch touchscreen display with a resolution of 1080 pixels by 1920 pixels at a PPI of 424 pixels per inch."
+    },
+    {
+        "name": "HTC One M9",
+        "type": "Phone",
+        "price": "$700",
+        "desc": "The HTC One M9 is powered by 1.5GHz octa-core Qualcomm Snapdragon 810 processor and it comes with 3GB of RAM. The phone packs 32GB of internal storage that can be expanded up to 128GB via a microSD card."
+    },
+    {
+        "name": "Sony vaio i5",
+        "type": "Laptop",
+        "price": "$790",
+        "desc": "Sony is so confident that the VAIO S is a superior ultraportable laptop that the company proudly compares the notebook to Apple's 13-inch MacBook Pro. And in a lot of ways this notebook is better, thanks to a lighter weight."
+    },
+    {
+        "name": "Sony vaio i7",
+        "type": "Laptop",
+        "price": "$790",
+        "desc": "REVIEW Sony is so confident that the VAIO S is a superior ultraportable laptop that the company proudly compares the notebook to Apple's 13-inch MacBook Pro. And in a lot of ways this notebook is better, thanks to a lighter weight, higher-resolution display, more storage space, and a Blu-ray drive."
+    },
+    {
+        "name": "MacBook air",
+        "type": "Laptop",
+        "price": "$700",
+        "desc": "1.6GHz dual-core Intel Core i5 (Turbo Boost up to 2.7GHz) with 3MB shared L3 cache Configurable to 2.2GHz dual-core Intel Core i7 (Turbo Boost up to 3.2GHz) with 4MB shared L3 cache."
+    },
+    {
+        "name": "Dell i7 8gb",
+        "type": "Laptop",
+        "price": "$700",
+        "desc": "6th Generation Intel Core i7-6500U Dual-Core Processor 2.5 GHz (max boost speed up to 3.1GHz) 4MB L3 Cache, 8GB DDR4 1600 MHz, 1TB 5400 RPM HDD15.6 in Full HD LED-backlit touchscreen with Truelife (1920 x 1080), 10-finger multi-touch support, Intel HD Graphics 520 with shared graphics memory"
+    },
+    {
+        "name": "2017 Dell 15.6 Inch",
+        "type": "Laptop",
+        "price": "$700",
+        "desc": "7th Gen Intel Core i7-7500U mobile processor 2.70 GHz with Turbo Boost Technology up to 3.50 GHz, Intel HD Graphics 62015.6 inch Full HD IPS TrueLife LED-backlit touchscreen (1920 x 1080), 10-finger multi-touch support, 360° flip-and-fold design,8GB DDR4 2400 MHz Memory, 1TB 5400 RPM HDD, No optical drive, 3 in 1 card reader (SD SDHC SDXC)"
+    },
+    {
+        "name": "MacBook Pro",
+        "type": "Laptop",
+        "price": "$1100",
+        "desc": "Apple has introduced three new versions of its MacBook Pro line, including a 13-inch and 15-inch model with the Touch Bar, a thin, multi-touch strip display that sits above the MacBook Pro's keyboard."
+    },
+    {
+        "name": "Apple monitor 24",
+        "type": "Monitor",
+        "price": "$400",
+        "desc": "LED Cinema Display features a 27-inch glossy LED-backlit TFT active-matrix LCD display with IPS technology and an optimum resolution of 2560x1440. It has a 178 degree horizontal and vertical viewing angle, a \"typical\" brightness of 375 cd/m2, contrast ratio of 1000:1, and a 12 ms response time."
+    },
+    {
+        "name": "ASUS Full HD",
+        "type": "Monitor",
+        "price": "$230",
+        "desc": "ASUS VS247H-P 23.6- Inch Full HD"
     }
 ]
