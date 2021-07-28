@@ -5,13 +5,12 @@ This is an automated test framework build using testCafe and Typescript against 
 
 
 ## Installation
-TestCafe is built upon NodeJS and requires nodeJS to be installed prior to installation of test script.  
-nodejs can be downloaded from:  https://nodejs.org/en/
+TestCafe is built upon NodeJS and requires nodeJS to be installed prior to installation of test script.  nodejs can be downloaded from:  https://nodejs.org/en/
 
 To install testCafe and associated project dependencies:
 1. ) Clone repository locally
 2. ) Navigate to top level project directory
-3. ) execute "npm install" command from terminal
+3. ) execute "npm install" command from terminal, this will install a node-modules directory containing the required npm packages.
 
 
 ## Execution
@@ -21,7 +20,6 @@ Execution scripts are defined in package.json file and can be added upon as seen
 2. ) npm run test:chrome:headless
 3. ) npm run test:ff
 4. ) npm run test:edge
-5. ) npm run test:concurrent
 
 ## Structure
 - Tests are defined in the /tests directory and are associated with individual application areas. 
