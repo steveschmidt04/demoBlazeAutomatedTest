@@ -5,7 +5,7 @@ This is an automated test framework build using testCafe and Typescript against 
 
 
 ## Installation
-TestCafe is built upon NodeJS and requires nodeJS to be installed prior to installation of test script.  nodejs can be downloaded from:  https://nodejs.org/en/
+TestCafe is built upon NodeJS and requires nodeJS to be installed prior to installation of test script.  NodeJS can be downloaded from:  https://nodejs.org/en/
 
 To install testCafe and associated project dependencies:
 1. ) Clone repository locally
