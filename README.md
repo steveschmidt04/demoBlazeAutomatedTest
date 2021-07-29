@@ -47,13 +47,13 @@ While developing a test suite for this application I found a handful or bugs and
 ## If I had more time
 I was able to complete this test suite in the 8 hours allotted, however, I feel that there are several areas in which it could be improved if I were given more time.  
 
-1. ) There are several areas in which I would have liked to create more helper functions for repetitive actions.  This would increase reusability,clean up the code and make it easier to read.
+1. ) There are several areas in which I would have liked to create more helper functions (specifically around selecting items from the homepage) for repetitive actions.  This would increase reusability,clean up the code and make it easier to read.
 
-2. ) Clean up implementation of deviceDetails.ts tests, I struggled with the dataSet.forEach function and could not get my data in without re-executing the entire test.  This should be more efficient.  
+2. ) Clean up implementation of deviceDetails.ts tests, I struggled with getting the data into the testcase with the dataSet.forEach function and could not get my data in without re-executing the entire test for each item verified in the time allotted.  This should be more efficient.  
 
 3. ) Add validation points for images associate with each item
 
-4. ) Implement steps using cucumber for better reusability and client product team understanding. This would be a large undertaking, but I believe beneficial in the long run for re-usability
+4. ) Implement steps using cucumber for better reusability and client product team understanding. This would be a larger undertaking, but I believe beneficial in the long run for re-usability if the client sees the value
 
 5. ) Automate testing against the About us video
 

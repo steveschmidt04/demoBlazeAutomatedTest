@@ -22,6 +22,7 @@ fixture `Shopping Cart`
         await t.setTestSpeed(1);
         await t.click(hp.headerLogIn);
         await login('autouser1@gmail.com','password4qa!')
+        await clearShoppingCart()
     })
     .after(async t => {
     })
@@ -33,9 +34,7 @@ fixture `Shopping Cart`
         ajaxRequestTimeout: 60000
     })
 
-    test(`Verify Device Added to shopping cart if user navigates to device details screen and clicks add to Cart button`, async t => {  
-        await clearShoppingCart()
-        
+    test.disablePageCaching(`Verify Device Added to shopping cart if user navigates to device details screen and clicks add to Cart button`, async t => {        
         let testDevices = new Array()
         //Grab test devices from shopping data json file
         var i = 0;
@@ -74,8 +73,8 @@ fixture `Shopping Cart`
     })    
 
 
-    test(`Verify Device removed from shopping cart if user adds item and then removes it`, async t => {  
-        await clearShoppingCart()
+    test.disablePageCaching(`Verify Device removed from shopping cart if user adds item and then removes it`, async t => {  
+        
         let testDevices = new Array()
         //Grab test devices from shopping data json file
         var i = 0;
@@ -107,12 +106,11 @@ fixture `Shopping Cart`
      //Validate total in cart matches total for items displayed for sum of items in cart
      let cartTotal = await calculateCartTotal();
      await t.expect(sc.total.innerText).eql(cartTotal.toString());
+     await clearShoppingCart()
     })    
 
-    test(`Verify items are saved in shopping cart if user logs in and logs out`, async t => {  
-        await clearShoppingCart()
-
-        let testDevices = new Array()
+    test.disablePageCaching(`Verify items are saved in shopping cart if user logs in and logs out`, async t => {  
+        let testDevices = new Array();
         //Grab test devices from shopping data json file
         var i = 0;
         await dataSet.forEach(async data =>{ 
@@ -124,8 +122,8 @@ fixture `Shopping Cart`
        for (var j=0; j < testDevices.length; j++){
         for (var k=0; k < devices.length; k++){
             if (await devices[k] == testDevices[j]){
-                await t.click(Selector('#tbodyid').child('div').nth(k).child('div').child('div').child('.card-title').child('a'))
-                break
+                await t.click(Selector('#tbodyid').child('div').nth(k).child('div').child('div').child('.card-title').child('a'));
+                break;
             }
         }   
         await t.setNativeDialogHandler(() => true)
@@ -135,7 +133,7 @@ fixture `Shopping Cart`
 
         //log out/log in and return to cart
         await t.click(hp.headerLogOut);
-        await t.wait(3000);
+        await t.wait(5000);
         await t.click(hp.headerLogIn);
         await login('autouser1@gmail.com','password4qa!');
         await t.click(hp.headerCart);
