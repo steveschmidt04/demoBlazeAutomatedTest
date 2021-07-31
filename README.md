@@ -1,7 +1,8 @@
 ## BlazeDemo automated test Framework
 
 ## About / Synopsis
-This is an automated test framework build using testCafe and Typescript against https://www.demoblaze.com/
+This is an automated test framework built as part of a project with an 8-hour time limit.  It is build using testCafe and Typescript against https://www.demoblaze.com/.
+Note: It is in no way a polished product; but a representation of my test development skills in a given time limit.  Please see the "If I had more time" section below for more information about additional implememtation details I would have made if a larger time window were granted.  
 
 
 ## Installation
@@ -49,12 +50,12 @@ I was able to complete this test suite in the 8 hours allotted, however, I feel 
 
 1. ) There are several areas in which I would have liked to create more helper functions (specifically around selecting items from the homepage) for repetitive actions.  This would increase reusability,clean up the code and make it easier to read.
 
-2. ) Clean up implementation of deviceDetails.ts tests, I struggled with getting the data into the testcase with the dataSet.forEach function and could not get my data in without re-executing the entire test for each item verified in the time allotted.  This should be more efficient.  
+2. ) Clean up implementation of deviceDetails.ts tests, I struggled with getting the data into the testcase with the dataSet.forEach function (getting data into a multi-dimensional array) and could not get my data in without re-executing the entire test for each item verified in the time allotted.  This should be more efficient.  
 
-3. ) Add validation points for images associate with each item
+3. ) Improve flexibility of pagination and streamline the input of data from a single input file to test both the homepage devices and the cart/checkout functions.  
 
 4. ) Implement steps using cucumber for better reusability and client product team understanding. This would be a larger undertaking, but I believe beneficial in the long run for re-usability if the client sees the value
 
 5. ) Automate testing against the About us video
 
-6. ) Add test coverage for contact us form, footer, and scrolling carousel on the homepage
+6. ) Add test coverage for images associate with each item, contact us form, footer, and scrolling carousel on the homepage
